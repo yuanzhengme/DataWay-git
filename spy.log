@@ -1,0 +1,46 @@
+#1626676383607 | took 87ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+select api_id,api_method,api_path,api_status,api_comment,api_type,api_create_time,api_gmt_time from interface_info order by api_create_time asc
+select api_id,api_method,api_path,api_status,api_comment,api_type,api_create_time,api_gmt_time from interface_info order by api_create_time asc;
+#1626676383609 | took 92ms | statement | connection 4| url jdbc:postgresql://172.81.205.216:2345/gpdb
+select api_id,api_method,api_path,api_status,api_comment,api_type,api_create_time,api_gmt_time from interface_info order by api_create_time asc
+select api_id,api_method,api_path,api_status,api_comment,api_type,api_create_time,api_gmt_time from interface_info order by api_create_time asc;
+#1626676383805 | took 43ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+select * from interface_info where api_id = ?
+select * from interface_info where api_id = 'i_eifmih0if-32f';
+#1626676383805 | took 43ms | statement | connection 5| url jdbc:postgresql://172.81.205.216:2345/gpdb
+select * from interface_info where api_id = ?
+select * from interface_info where api_id = 'i_eifmih0if-32f';
+#1626676383899 | took 38ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+select * from interface_info where api_id = ?
+select * from interface_info where api_id = 'i_eifmih0if-32f';
+#1626676383899 | took 38ms | statement | connection 6| url jdbc:postgresql://172.81.205.216:2345/gpdb
+select * from interface_info where api_id = ?
+select * from interface_info where api_id = 'i_eifmih0if-32f';
+#1626676391449 | took 35ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+select pub_id,pub_api_id from interface_release where pub_status != ? and pub_path = ? order by pub_release_time desc
+select pub_id,pub_api_id from interface_release where pub_status != '-1' and pub_path = '/api/test' order by pub_release_time desc;
+#1626676391449 | took 36ms | statement | connection 7| url jdbc:postgresql://172.81.205.216:2345/gpdb
+select pub_id,pub_api_id from interface_release where pub_status != ? and pub_path = ? order by pub_release_time desc
+select pub_id,pub_api_id from interface_release where pub_status != '-1' and pub_path = '/api/test' order by pub_release_time desc;
+#1626676391522 | took 39ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+select * from interface_release where pub_status != ? and pub_id = ?
+select * from interface_release where pub_status != '-1' and pub_id = 'r_eifmin7b544j1';
+#1626676391522 | took 39ms | statement | connection 8| url jdbc:postgresql://172.81.205.216:2345/gpdb
+select * from interface_release where pub_status != ? and pub_id = ?
+select * from interface_release where pub_status != '-1' and pub_id = 'r_eifmin7b544j1';
+#1626676391876 | took 52ms | statement | connection 2| url jdbc:p6spy:postgresql://172.81.205.216:2345/gpdb
+-- a new Query.
+SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = ?;
+-- a new Query.
+SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = '豫A5VT98';;
+#1626676391876 | took 52ms | statement | connection 9| url jdbc:postgresql://172.81.205.216:2345/gpdb
+-- a new Query.
+SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = ?;
+-- a new Query.
+SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = '豫A5VT98';;
+executionTime:65| sql:select pub_id,pub_api_id from interface_release where pub_status != '-1' and pub_path = '/api/test' order by pub_release_time desc
+executionTime:68| sql:select pub_id,pub_api_id from interface_release where pub_status != '-1' and pub_path = '/api/test' order by pub_release_time desc
+executionTime:37| sql:select * from interface_release where pub_status != '-1' and pub_id = 'r_eifmin7b544j1'
+executionTime:38| sql:select * from interface_release where pub_status != '-1' and pub_id = 'r_eifmin7b544j1'
+executionTime:38| sql:-- a new Query. SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = '豫A5VT98';
+executionTime:38| sql:-- a new Query. SELECT * FROM yz_test_match ytm WHERE ytm.firstrecommendfield = '豫A5VT98';
